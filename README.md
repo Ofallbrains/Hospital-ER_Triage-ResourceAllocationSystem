@@ -64,19 +64,39 @@ Run the scripts in order from SQL Developer using the `ER_triage` connection (us
 ---
 
 ## Links to Documentation
-All detailed documentation is under the `documentation/` and `business_intelligence/` folders in this repository:
+All detailed documentation is under the `documentation/`, `database/documentation/`, `screenshots/`, and `business_intelligence/` folders in this repository:
 
 - `documentation/architecture.md` – Overall system and database architecture.  
 - `documentation/design_decisions.md` – Major design choices and trade‑offs.  
-- `documentation/data_dictionary.md` – Full table and column data dictionary.  
-## Phase II: Business Process Modeling
-[Phase II: Business Process Model – Full Explanation](database/documentation/Phase2_Business_Process_Model.md)
-
-![Phase II ER Triage BPMN](screenshots/database_objects/HospitalER.jpg)
+- `documentation/data_dictionary.md` – Full table and column data dictionary (Phase III deliverable).  
+- `database/documentation/Phase2_Business_Process_Model.md` – Phase II BPMN diagram explanation (business process model).  
 - `screenshots/README.md` – Screenshot checklist and how to capture evidence.  
 - `business_intelligence/bi_requirements.md` – BI requirements, stakeholders, and reporting frequencies.  
 - `business_intelligence/kpi_definitions.md` – Formal KPI definitions, formulas, and targets.  
 - `business_intelligence/dashboards.md` – Dashboard mockups and supporting queries.
 
 Use this `README.md` as the entry point for the marker to understand the project and quickly navigate to the rest of the documentation.
+
+---
+
+## Phase II: Business Process Modeling
+
+[Phase II: Business Process Model – Full Explanation](database/documentation/Phase2_Business_Process_Model.md)
+
+![Phase II ER Triage BPMN](screenshots/database_objects/HospitalER.jpg)
+
+---
+
+## Phase III: ER Diagram, Data Dictionary, and Assumptions
+
+Phase III focuses on documenting the logical data model and design assumptions.
+
+- **ER Diagram (logical/physical model):**  
+  [`screenshots/database_objects/er_diagram.png`](screenshots/database_objects/er_diagram.png) – ER diagram image showing all tables and relationships (captured from SQL Developer / Data Modeler).
+
+- **Data Dictionary:**  
+  [`documentation/data_dictionary.md`](documentation/data_dictionary.md) – One‑page table listing every table, column, data type, constraints, and purpose. This satisfies the “data dictionary” part of the Phase III deliverable.
+
+- **Design Assumptions & Notes:**  
+  [`documentation/design_decisions.md`](documentation/design_decisions.md) – Key design decisions and assumptions (triage levels, bed allocation rules, audit strategy, weekend restrictions, etc.).
 
