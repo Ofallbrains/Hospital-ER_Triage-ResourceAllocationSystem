@@ -81,9 +81,9 @@ Use this `README.md` as the entry point for the marker to understand the project
 
 ## Phase II: Business Process Modeling
 
-[Phase II: Business Process Model – Full Explanation](database/documentation/Phase2_Business_Process_Model.md)
+[`Phase II: Business Process Model – Full Explanation`](database/documentation/Phase2_Business_Process_Model.md)
 
-![Phase II ER Triage BPMN](screenshots/database_objects/HospitalER.jpg)
+[`Phase II ER Triage BPMN`](screenshots/database_objects/HospitalER.jpg)
 
 ---
 
@@ -99,4 +99,25 @@ Phase III focuses on documenting the logical data model and design assumptions.
 
 - **Design Assumptions & Notes:**  
   [`documentation/design_decisions.md`](documentation/design_decisions.md) – Key design decisions and assumptions (triage levels, bed allocation rules, audit strategy, weekend restrictions, etc.).
+
+---
+
+## Phase IV: Database Environment & Setup (GitHub Documentation)
+
+Phase IV documents how to create and configure the Oracle environment for this project.
+
+- **Database creation scripts:**  
+	- [`database/scripts/phase4_create_pluggable_db.sql`](database/scripts/phase4_create_pluggable_db.sql) – creates the pluggable database and base environment for the ER triage schema.
+
+- **Tablespace configuration:**  
+	- Described in [`database/documentation/Phase4_Database_Creation.md`](database/documentation/Phase4_Database_Creation.md) as part of the environment setup.
+
+- **Project structure overview:**  
+	- [`database/documentation/Phase4_Database_Creation.md`](database/documentation/Phase4_Database_Creation.md) – narrative explanation of database creation steps and environment setup.  
+
+- **Test diagram to show tablespaces and database:**  
+  [`screenshots/test_results/db`](screenshots/test_results/1_show_db_test.png)
+  [`screenshots/test_result/tablespace`](screenshots/test_results/2_show_tablespaces_test.png)
+  [`screenshots/test_results/tablespace`](screenshots/test_results/3_tablespaces_spaces_test.png)
+
 
