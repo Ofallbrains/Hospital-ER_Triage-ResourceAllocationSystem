@@ -70,6 +70,12 @@ All detailed documentation is under the `documentation/`, `database/documentatio
 - `documentation/design_decisions.md` – Major design choices and trade‑offs.  
 - `documentation/data_dictionary.md` – Full table and column data dictionary (Phase III deliverable).  
 - `database/documentation/Phase2_Business_Process_Model.md` – Phase II BPMN diagram explanation (business process model).  
+- `database/documentation/Phase3_Logical_Model_Design.md` – Phase III logical model design notes.  
+- `database/documentation/Phase4_Database_Creation.md` – Phase IV database creation and environment setup.  
+- `database/documentation/Phase5_Table_Implementation.md` – Phase V table implementation explanation.  
+- `database/documentation/Phase5_Table_Implementation_and_Data_Insertion.md` – Phase V combined create/insert narrative.  
+- `database/documentation/Phase6_Procedures_and_Packages.md` – Phase VI PL/SQL procedures and package documentation.  
+- `database/documentation/Phase7_Triggers_and_Auditing.md` – Phase VII triggers and auditing documentation.  
 - `screenshots/README.md` – Screenshot checklist and how to capture evidence.  
 - `business_intelligence/bi_requirements.md` – BI requirements, stakeholders, and reporting frequencies.  
 - `business_intelligence/kpi_definitions.md` – Formal KPI definitions, formulas, and targets.  
@@ -126,7 +132,7 @@ Phase IV documents how to create and configure the Oracle environment for this p
 
 Phase V focuses on implementing the logical model physically in Oracle and loading sample data.
 
-- [`database/documentation/Phase5_Table_Implementation.md`](database/documentation/Phase5_Table_Implementation.md)
+- [`database/documentation/Phase5_Table_Implementation_and_Data_Insertion.md`](database/documentation/Phase5_Table_Implementation_and_Data_Insertion.md) – narrative description of table implementation and data loading for this phase.
 
 - **CREATE scripts (table definitions):**  
 	- [`database/scripts/phase5_create_tables.sql`](database/scripts/phase5_create_tables.sql) – creates all core ER tables (patients, triage levels, staff, beds, arrivals, treatment sessions, supplies, medications, alerts, audit tables, etc.).
@@ -134,11 +140,37 @@ Phase V focuses on implementing the logical model physically in Oracle and loadi
 - **INSERT scripts (sample data):**  
 	- [`database/scripts/phase5_insert_data.sql`](database/scripts/phase5_insert_data.sql) – inserts realistic sample data for all tables so that procedures, triggers, and analytics can be tested.
 
+    -[`database/documents/Phase5_inserted_data.md](database/documentation/Phase5_inserted_data.md)
+
 - **Validation queries:**  
 	- [`database/scripts/phase5_validation_queries.sql`](database/scripts/phase5_validation_queries.sql) – row‑count and consistency checks used to confirm that data was loaded correctly across all 15 tables.
 
 - **Test result screenshots:**   
-	- [`screenshots/test_results/validation`](screenshots/test_results/4_validation_data_test.png) – output of the validation queries showing row counts for each table.
+	- [`screenshots/test_results/4_validation_data_test.png`](screenshots/test_results/4_validation_data_test.png) – output of the validation queries showing row counts for each table.
+
+---
+
+## Phase VI: PL/SQL Procedures and Package
+
+Phase VI introduces the main PL/SQL business logic for ER triage management. The GitHub deliverable is: **PL/SQL scripts + test results**.
+
+- [`database/documentation/Phase6_Procedures_and_Packages.md`](database/documentation/Phase6_Procedures_and_Packages.md) – detailed narrative and rationale for this phase.
+
+- **Audit and error tables:**  
+	- [`database/scripts/phase6_step1_audit_tables.sql`](database/scripts/phase6_step1_audit_tables.sql) – creates `ER_ERROR_LOG` and `ER_AUDIT_LOG` tables used by procedures and triggers.
+
+- **PL/SQL package and procedures:**  
+	- [`database/scripts/phase6_step2_package.sql`](database/scripts/phase6_step2_package.sql) – defines the `PKG_ER_TRIAGE_MGMT` package with procedures for registering arrivals, assigning beds, starting treatment, and discharging patients.
+
+- **Test script:**  
+	- [`database/scripts/phase6_step3_tests.sql`](database/scripts/phase6_step3_tests.sql) – runs sample calls against the package/procedures to verify they execute.
+
+- **Test result screenshots:**  
+	- [`screenshots/test_results/phase6_package_creation.png`](screenshots/test_results/5_package_valid_test.png) – output from compiling the package ("Package created" / "Package body created").  
+	-['Triggers data'](screenshots/database_objects/triggers_data.png)
+	-['functions data'](screenshots/database_objects/functions_data.png)
+
+
 
 
 

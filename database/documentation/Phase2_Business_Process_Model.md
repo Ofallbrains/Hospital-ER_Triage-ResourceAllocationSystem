@@ -82,6 +82,6 @@ This structure highlights **handoff points** between actors (e.g., from Registra
   - Relationship between **triage priority and outcomes** (admission, transfer, return visits).  
   - **Cost per ER visit** and use of high‑cost diagnostics.
 
-  ![ER Triage BPMN Diagram](HospitalER.jpg)
+  ![ER Triage BPMN Diagram](screenshots/database_objects/HospitalER.jpg)
 
 ---
