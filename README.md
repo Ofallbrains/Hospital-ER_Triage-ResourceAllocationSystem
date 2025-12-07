@@ -69,8 +69,10 @@ All detailed documentation is under the `documentation/` and `business_intellige
 - `documentation/architecture.md` – Overall system and database architecture.  
 - `documentation/design_decisions.md` – Major design choices and trade‑offs.  
 - `documentation/data_dictionary.md` – Full table and column data dictionary.  
-- Phase II BPMN diagram explanation (business process model)
-[Phase II: Business Process Model](database/documentation/Phase2_Business_Process_Model.md)
+## Phase II: Business Process Modeling
+[Phase II: Business Process Model – Full Explanation](database/documentation/Phase2_Business_Process_Model.md)
+
+![Phase II ER Triage BPMN](screenshots/database_objects/HospitalER.jpg)
 - `screenshots/README.md` – Screenshot checklist and how to capture evidence.  
 - `business_intelligence/bi_requirements.md` – BI requirements, stakeholders, and reporting frequencies.  
 - `business_intelligence/kpi_definitions.md` – Formal KPI definitions, formulas, and targets.  
