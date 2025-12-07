@@ -3,6 +3,7 @@
 ## Student Information
 - **Student Name:** Denyse Uwamwezi  
 - **Student ID:** 27976
+- **Submission date:** 7th December 2025
 
 ---
 
@@ -140,7 +141,7 @@ Phase V focuses on implementing the logical model physically in Oracle and loadi
 - **INSERT scripts (sample data):**  
 	- [`database/scripts/phase5_insert_data.sql`](database/scripts/phase5_insert_data.sql) – inserts realistic sample data for all tables so that procedures, triggers, and analytics can be tested.
 
-    -[`database/documents/Phase5_inserted_data.md](database/documentation/Phase5_inserted_data.md)
+	- [`database/documentation/Phase5_inserted_data.md`](database/documentation/Phase5_inserted_data.md)
 
 - **Validation queries:**  
 	- [`database/scripts/phase5_validation_queries.sql`](database/scripts/phase5_validation_queries.sql) – row‑count and consistency checks used to confirm that data was loaded correctly across all 15 tables.
@@ -167,8 +168,26 @@ Phase VI introduces the main PL/SQL business logic for ER triage management. The
 
 - **Test result screenshots:**  
 	- [`screenshots/test_results/phase6_package_creation.png`](screenshots/test_results/5_package_valid_test.png) – output from compiling the package ("Package created" / "Package body created").  
-	-['Triggers data'](screenshots/database_objects/triggers_data.png)
-	-['functions data'](screenshots/database_objects/functions_data.png)
+	- ['Triggers data'](screenshots/database_objects/triggers_data.png)
+	- ['Functions data'](screenshots/database_objects/functions_data.png)
+
+---
+
+## Phase VII: Triggers and Auditing
+
+Phase VII adds auditing triggers to capture key changes in the ER system. The GitHub deliverable is: **GitHub submission (trigger code + audit queries + test results)**.
+
+- [`database/documentation/Phase7_Triggers_and_Auditing.md`](database/documentation/Phase7_Triggers_and_Auditing.md) – explanation of trigger design, auditing approach, and how tests were executed.
+
+- **Trigger and auditing code:**  
+	- [`database/scripts/phase7_step1_triggers.sql`](database/scripts/phase7_step1_triggers.sql) – trigger definitions for auditing key tables/events.  
+	- [`database/scripts/phase7_step2_audit_queries.sql`](database/scripts/phase7_step2_audit_queries.sql) – sample queries to inspect the audit trail and verify triggers fired as expected.
+
+- **Test result screenshots:**  
+	- [`screenshots/test_results/6_weekend_allowed_test.png`](screenshots/test_results/6_weekend_allowed_test.png) – verifies that public‑holiday/weekend rules are correctly enforced.  
+	- [`screenshots/test_results/7_audit_log_test.png`](screenshots/test_results/7_audit_log_test.png) – shows rows written into the audit log by the triggers.  
+	- [`screenshots/test_results/8_phase7_test.png`](screenshots/test_results/8_phase7_test.png) – consolidated Phase VII test run showing trigger firing and captured audit details.  
+	- [`screenshots/test_results/9_phase7_allowed.png`](screenshots/test_results/9_phase7_allowed.png) – confirms allowed operations proceed successfully while still being audited.
 
 
 
