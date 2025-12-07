@@ -115,9 +115,30 @@ Phase IV documents how to create and configure the Oracle environment for this p
 - **Project structure overview:**  
 	- [`database/documentation/Phase4_Database_Creation.md`](database/documentation/Phase4_Database_Creation.md) – narrative explanation of database creation steps and environment setup.  
 
-- **Test diagram to show tablespaces and database:**  
-  [`screenshots/test_results/db`](screenshots/test_results/1_show_db_test.png)
-  [`screenshots/test_result/tablespace`](screenshots/test_results/2_show_tablespaces_test.png)
-  [`screenshots/test_results/tablespace`](screenshots/test_results/3_tablespaces_spaces_test.png)
+- **Test diagrams to show database and tablespaces:**  
+	- [`screenshots/test_results/1_show_db_test.png`](screenshots/test_results/1_show_db_test.png) – shows the created pluggable database.  
+	- [`screenshots/test_results/2_show_tablespaces_test.png`](screenshots/test_results/2_show_tablespaces_test.png) – lists available tablespaces.  
+	- [`screenshots/test_results/3_tablespaces_spaces_test.png`](screenshots/test_results/3_tablespaces_spaces_test.png) – shows free/used space per tablespace.
+
+---
+
+## Phase V: Table Creation, Data Insertion, and Validation
+
+Phase V focuses on implementing the logical model physically in Oracle and loading sample data.
+
+- [`database/documentation/Phase5_Table_Implementation.md`](database/documentation/Phase5_Table_Implementation.md)
+
+- **CREATE scripts (table definitions):**  
+	- [`database/scripts/phase5_create_tables.sql`](database/scripts/phase5_create_tables.sql) – creates all core ER tables (patients, triage levels, staff, beds, arrivals, treatment sessions, supplies, medications, alerts, audit tables, etc.).
+
+- **INSERT scripts (sample data):**  
+	- [`database/scripts/phase5_insert_data.sql`](database/scripts/phase5_insert_data.sql) – inserts realistic sample data for all tables so that procedures, triggers, and analytics can be tested.
+
+- **Validation queries:**  
+	- [`database/scripts/phase5_validation_queries.sql`](database/scripts/phase5_validation_queries.sql) – row‑count and consistency checks used to confirm that data was loaded correctly across all 15 tables.
+
+- **Test result screenshots:**   
+	- [`screenshots/test_results/validation`](screenshots/test_results/4_validation_data_test.png) – output of the validation queries showing row counts for each table.
+
 
 
